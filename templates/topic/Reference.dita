@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "urn:pubid:reinmedical.com:doctypes:dita:reference" "reference.dtd"><reference id="reference_${id}">
+  <title>${caret}</title>
+  <shortdesc></shortdesc>
+  <refbody>
+  </refbody>
+</reference>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<val>
+ <!-- ____________ -->
+ <!-- GENERAL-->
+ <!--Alle profilierten Inhalte werden zunächst pauschal ausgeschlossen (excluded). 
+Außer Audience, da diese i.d.R. immer drin sein sollen
+In diesem Bereich nichts ändern. -->
+ 
+ 
+ <prop action="exclude" att="props"/>
+ <prop action="exclude" att="product"/>
+ <prop action="exclude" att="platform"/>
+ <prop action="exclude" att="otherprops"/>
+ <prop action="exclude" att="rm-bauart"/>
+ <prop action="exclude" att="rm-typ"/>
+ <prop action="exclude" att="rm-feature"/>
+ <prop action="exclude" att="rm-regulatory"/>
+ <prop action="exclude" att="rm-option"/>
+ <prop action="exclude" att="rm-prodversion"/>
+ 
+ 
+ <!--   -->
+ <!-- ____________ -->
+ <!-- AUDIENCE -->
+ <!-- Nachfolgend alle Zielgruppen aufführen, die für diese Publikation ausgeschlossen (excluded) werden sollen. -->
+ <prop action="exclude" att="audience" val="Local-USA"/>
+ <!-- Redaktionsinhalte werden immer ausgeschlossen -->
+ <prop action="exclude" att="audience" val="Redaktion"/>
+ 
+ 
+ <!--   -->
+ <!-- ____________ -->
+ <!-- PRODUCT -->
+ <!-- Nachfolgend das Produkt aufführen, dass eingeschlossen (included) werden soll. -->
+ <prop action="include" att="product" val=""/>
+ 
+ 
+ <!--   -->
+ <!-- ____________ -->
+ <!-- PRODUCT-VERSION -->
+ <!-- Nachfolgend die Produkt-Revisionsnummer eintragen.
+Dieses Attribut wird nicht zu Filterzwecken verwendet. -->
+ <prop action="include" att="rm_prodversion" val=""/>
+ 
+ 
+ <!--   -->
+ <!-- ____________ -->
+ <!-- RM-BAUART -->
+ <!-- Nachfolgend die möglichen Bauarten aufführen, die für das Produkt eingeschlossen (included) werden sollen. -->
+ <!-- Mögliche Werte: br, fb, body, variop, nonvariop, desktop, vesadesktop, 19rack, mobile, onwall-->
+ <prop action="include" att="rm-bauart" val=""/>
+ 
+ 
+ <!--   -->
+ <!-- ____________ -->
+ <!-- RM-TYP -->
+ <!-- Nachfolgend den Produkttyp auswählen. Nur eine Auswahl ist zulässig. -->
+ <!-- Mögliche Werte: Monitor, Computer, AllinOneComputer, AllinOneThinClient, MobileComputer, MobileThinClient, ThinClient, Workstation, Converter, Software, InputDevice, InfoClock, Cart -->
+ <prop action="include" att="rm-typ" val=""/>
+ 
+ 
+ <!--   -->
+ <!-- ____________ -->
+ <!-- RM-FEATURE -->
+ <!-- Nachfolgend alle festen Ausstattungsmerkmale des Produkts festlegen. Optionale Merkmale nur unter "rm-option" festlegen. -->
+ <!-- Mögliche Werte: DICOM, Touch, Lightbox, Commandbar, Commandbar2, ThinClient-->
+ <prop action="include" att="rm-feature" val=""/>
+ 
+ 
+ <!--   -->
+ <!-- ____________ -->
+ <!-- RM-REGULATORY -->
+ <!-- Nachfolgend die vom Prpdukt erfüllten nationalen Anforderungen auswählen. Mindestens eine Europäische. Für jede Rechtsregion.  Nur ein Wert möglich. -->
+ <!-- Mögliche Werte: EU-MDD, EU-LVD, EU-LVD-60601, US-60950, US-60950-60601-->
+ <prop action="include" att="rm-regulatory" val=""/>
+ 
+ 
+ <!--   -->
+ <!-- ____________ -->
+ <!-- RM-OPTION -->
+ <!-- Nachfolgend die möglichen optionalen Ausstattungsmerkmale auswählen. -->
+ <!-- Mögliche Werte: IP65, WLAN, RS232, DVD, Barcode, MedigenicES, DoctrayTouch, DoctrayMedigenicES, extUSB, extVideoIn-->
+ <prop action="include" att="rm-option" val=""/>
+</val>
