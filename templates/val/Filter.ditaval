@@ -1,84 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <val>
- <!-- ____________ -->
- <!-- GENERAL-->
- <!--Alle profilierten Inhalte werden zunächst pauschal ausgeschlossen (excluded). 
-Außer Audience, da diese i.d.R. immer drin sein sollen
-In diesem Bereich nichts ändern. -->
- 
- 
- <prop action="exclude" att="props"/>
- <prop action="exclude" att="product"/>
- <prop action="exclude" att="platform"/>
- <prop action="exclude" att="otherprops"/>
- <prop action="exclude" att="rm-bauart"/>
- <prop action="exclude" att="rm-typ"/>
- <prop action="exclude" att="rm-feature"/>
- <prop action="exclude" att="rm-regulatory"/>
- <prop action="exclude" att="rm-option"/>
- <prop action="exclude" att="rm-prodversion"/>
- 
- 
- <!--   -->
- <!-- ____________ -->
- <!-- AUDIENCE -->
- <!-- Nachfolgend alle Zielgruppen aufführen, die für diese Publikation ausgeschlossen (excluded) werden sollen. -->
- <prop action="exclude" att="audience" val="Local-USA"/>
- <!-- Redaktionsinhalte werden immer ausgeschlossen -->
- <prop action="exclude" att="audience" val="Redaktion"/>
- 
- 
- <!--   -->
- <!-- ____________ -->
- <!-- PRODUCT -->
- <!-- Nachfolgend das Produkt aufführen, dass eingeschlossen (included) werden soll. -->
- <prop action="include" att="product" val=""/>
- 
- 
- <!--   -->
- <!-- ____________ -->
- <!-- PRODUCT-VERSION -->
- <!-- Nachfolgend die Produkt-Revisionsnummer eintragen.
-Dieses Attribut wird nicht zu Filterzwecken verwendet. -->
- <prop action="include" att="rm_prodversion" val=""/>
- 
- 
- <!--   -->
- <!-- ____________ -->
- <!-- RM-BAUART -->
- <!-- Nachfolgend die möglichen Bauarten aufführen, die für das Produkt eingeschlossen (included) werden sollen. -->
- <!-- Mögliche Werte: br, fb, body, variop, nonvariop, desktop, vesadesktop, 19rack, mobile, onwall-->
- <prop action="include" att="rm-bauart" val=""/>
- 
- 
- <!--   -->
- <!-- ____________ -->
- <!-- RM-TYP -->
- <!-- Nachfolgend den Produkttyp auswählen. Nur eine Auswahl ist zulässig. -->
- <!-- Mögliche Werte: Monitor, Computer, AllinOneComputer, AllinOneThinClient, MobileComputer, MobileThinClient, ThinClient, Workstation, Converter, Software, InputDevice, InfoClock, Cart -->
- <prop action="include" att="rm-typ" val=""/>
- 
- 
- <!--   -->
- <!-- ____________ -->
- <!-- RM-FEATURE -->
- <!-- Nachfolgend alle festen Ausstattungsmerkmale des Produkts festlegen. Optionale Merkmale nur unter "rm-option" festlegen. -->
- <!-- Mögliche Werte: DICOM, Touch, Lightbox, Commandbar, Commandbar2, ThinClient-->
- <prop action="include" att="rm-feature" val=""/>
- 
- 
- <!--   -->
- <!-- ____________ -->
- <!-- RM-REGULATORY -->
- <!-- Nachfolgend die vom Prpdukt erfüllten nationalen Anforderungen auswählen. Mindestens eine Europäische. Für jede Rechtsregion.  Nur ein Wert möglich. -->
- <!-- Mögliche Werte: EU-MDD, EU-LVD, EU-LVD-60601, US-60950, US-60950-60601-->
- <prop action="include" att="rm-regulatory" val=""/>
- 
- 
- <!--   -->
- <!-- ____________ -->
- <!-- RM-OPTION -->
- <!-- Nachfolgend die möglichen optionalen Ausstattungsmerkmale auswählen. -->
- <!-- Mögliche Werte: IP65, WLAN, RS232, DVD, Barcode, MedigenicES, DoctrayTouch, DoctrayMedigenicES, extUSB, extVideoIn-->
- <prop action="include" att="rm-option" val=""/>
+    <!-- ======================================= -->
+    <!--      GENERAL SETTINGS, DON´T CHANGE!    -->
+    <!-- ======================================= -->
+    <!-- Alle profilierten Inhalte werden zunächst pauschal ausgeschlossen (exclude). -->
+    <prop action="exclude" att="props"/>  
+    <prop action="exclude" att="product"/>  
+    <prop action="exclude" att="platform"/>
+    <prop action="exclude" att="rm-bauart"/>
+    <prop action="exclude" att="rm-bauart-op-integrate-name"/>
+    <prop action="exclude" att="rm-bauart-op-module-typ"/>
+    <prop action="exclude" att="rm-bauart-op-front-typ"/>
+    <prop action="exclude" att="rm-bauart-op-front-fix"/>
+    <prop action="exclude" att="rm-bauart-op-install-tray"/>
+    <prop action="exclude" att="rm-regulatory"/>
+    <prop action="exclude" att="rm-type"/>
+    <prop action="exclude" att="otherprops"/>
+    <prop action="exclude" att="rm-feature"/>
+    <prop action="exclude" att="rm-feature-ip"/> 
+    <prop action="exclude" att="rm-feature-power"/>
+    <prop action="exclude" att="rm-feature-protection"/>
+    <prop action="exclude" att="rm-feature-emc-class"/>
+    <prop action="exclude" att="rm-feature-switch-off"/>
+    <prop action="exclude" att="rm-feature-zpa"/>
+    <prop action="exclude" att="rm-feature-video-port"/>
+    <prop action="exclude" att="rm-feature-pc"/>
+    <prop action="exclude" att="rm-feature-pc-port"/>
+    <prop action="exclude" att="rm-feature-pc-card"/>
+    <prop action="exclude" att="rm-feature-display"/>
+    <prop action="exclude" att="rm-option"/>
+    <!-- Außer Audience, da die Zeilgruppen im Manual i.d.R. immer drin sein sollen -->
+    
+    
+    <!-- ======================================= -->
+    <!--      PRODUCT CONFIGURATION BELOW        -->
+    <!-- ======================================= -->
+    
+    <!-- AUDIENCE -->
+    
+    <!-- Nachfolgend alle Zielgruppen aufführen, die ausgeschlossen (excluded) werden sollen. -->
+    <prop action="exclude" att="audience" val="Local-USA"/>  <!-- Bleibt drin, bis alle Filter entfernt wurden -->
+    <prop action="exclude" att="audience" val="Service-Techniker"/>
+    
+    <!-- Redaktionsinhalte werden immer ausgeschlossen -->
+    <prop action="exclude" att="audience" val="Redaktion"/>
+    
+    
+    <!-- ======================================= -->
+    <!-- PRODUCT -->
+    <!-- Nachfolgend das Produkt aufführen, dass eingeschlossen (included) werden soll. -->
+    <prop action="include" att="product" val=""/>
+    
+    <!-- Rein Medical Attributes and values -->
+    
+    
+    <!-- ======================================= -->
+    <!-- RM-Bauarten (1) -->
+    
+    <!-- OPERION spezifische Features (Prefix "OP-") -->
+    
+    <!-- OPERION On-wall Bezeichnung (0/1) -->
+    
+    <!-- OPERION Modularität (1)-->
+    
+    <!-- OPERION Glas Front Modul Typ (1)-->
+    
+    <!-- OPERION Front Befestigung (1)-->
+    
+    <!-- OPERION Montagewannen Typen(1) -->
+    
+    
+    <!-- ======================================= -->
+    <!-- Regionale Regulierungsgrundlage (1 je Region-Prefix) -->
+    
+    
+    <!-- ======================================= -->
+    <!-- Gerätetyp. Je Produkt nur ein Typ möglich (1) ggf. weitere als rm-option möglich -->
+    
+    
+    <!-- ======================================= -->
+    <!-- Firma Handelsname (Otherprops) -->
+    
+    
+    <!-- ======================================= -->
+    <!-- Feste Produktbestandteile (Features) keine optionalen Eigenschaften-->
+    <!-- keine Displays, PC-Komponenten, Bauweisen-->
+    
+    <!-- Display Features (n) -->
+        
+    <!-- Commandbar Typ (1) -->
+    
+    <!-- Gehäuseschutz (1) -->
+    
+    <!-- Netzanschluss (1)-->
+    
+    <!-- Elektrische Schutzart des Gehäuses (1)-->
+    
+    <!-- EMV Klasse (1)-->
+    
+    <!-- Netztrennungsmaßnahme (1) -->
+    
+    <!-- ZPA (1) -->
+    
+    <!-- Ports Video-Controller (n) -->
+    
+    <!-- Ports Computer (n) -->
+    
+    <!-- PC-Mainboard (1-2) -->
+    
+    <!-- PC-Mainboard Erweiterung(n) -->
+    
+    <!-- PC-Eingabegeräte (1) -->
+    
+    <!-- Video-Controller (1 or 2) -->
+    
+    <!-- Video-Controller Features(n) -->
+    
+    <!-- Video-Controller Features Light-Box (1) -->
+    
+    <!-- Display-Anzahl (1) -->
+    
+    
+    <!-- ======================================= -->
+    <!-- RM-Option--> 
+    <!-- rm-option Werte müssen 1:1 von anderen Filterattributen abgeleitet werden. --> 
+    <!-- Das Attribut, von dem abgeleitet wurde, darf nicht auf "include" stehen  -->
+    <!-- Der Filterwert wird 1:1 übernommen UND der Filtername mit Unterstrich abgegrenzt vorangestellt -->
+    
+    <prop action="exclude" att="rm-option" val="5-Jahre-Garantie"/>
+
 </val>
